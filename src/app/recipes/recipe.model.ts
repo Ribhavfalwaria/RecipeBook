@@ -3,7 +3,7 @@ import { Indgredient } from '../shared/indgredient.model';
 export class Recipe {
   public name: string = '';
   public description: string = '';
-  public imagePath: string = '';
+  public imagepath: string = '';
   public indgredients: Indgredient[];
   constructor(
     name: string,
@@ -13,7 +13,7 @@ export class Recipe {
   ) {
     this.name = name;
     this.description = desc;
-    this.imagePath = imagePath;
+    this.imagepath = imagePath;
     this.indgredients = indgredient;
   }
 }

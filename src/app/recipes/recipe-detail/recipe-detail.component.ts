@@ -13,7 +13,7 @@ export class RecipeDetailComponent implements OnInit {
   recipe: Recipe = {
     name: '',
     description: '',
-    imagePath: '',
+    imagepath: '',
     indgredients: [],
   };
   constructor(
@@ -35,5 +35,10 @@ export class RecipeDetailComponent implements OnInit {
 
   onEditRecipe() {
     this.router.navigate(['edit'], { relativeTo: this.route });
+  }
+  
+  onDeleteRecipe(){
+    this.recipeservice.deleteRecipe(this.id);
+    this.router.navigate(['/recipes'], { relativeTo: this.route });
   }
 }
